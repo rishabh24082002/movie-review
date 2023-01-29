@@ -50,8 +50,12 @@ onClick={()=>searchMovies(searchTerm)}/>
         (
 
        <div className="container">
-        {movies.map((movie)=>(
-       <MovieCard movie={movie}/>))};
+        {movies.map((movie, index)=>(
+            <div key={index}>
+           <MovieCard movie={movie}/>
+           </div>
+       ))
+       };
        </div> 
         ):(
             <div className="empty">
